@@ -157,6 +157,10 @@ if (isGetCookie = typeof $request !== 'undefined') {
       redpbodyVal = redpArr[i];
       $.index = i + 1;
       console.log(`-------------------------\n\n开始【中青看点${$.index}】`)
+      console.log(`============ CookieYouth${signheaderVal}  =============\n`) 
+      console.log(`============ ARTBODYs${articlebodyVal}  =============\n`) 
+      console.log(`============ REDBODYs${redpbodyVal}  =============\n`) 
+      console.log(`============ READTIME${timebodyVal}  =============\n`)  
     }
   await sign();
   await signInfo();
