@@ -124,10 +124,6 @@ if ($.isNode()) {
       console.log(`============ 共${cookiesArr.length}个中青账号  =============\n`)
       console.log(`============ 脚本执行-国际标准时间(UTC)：${new Date().toLocaleString()}  =============\n`)
       console.log(`============ 脚本执行-北京时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}  =============\n`)
-      console.log(`============ CookieYouth${CookieYouth}  =============\n`) 
-      console.log(`============ ARTBODYs${ARTBODYs}  =============\n`) 
-      console.log(`============ REDBODYs${REDBODYs}  =============\n`) 
-      console.log(`============ READTIME${READTIME}  =============\n`)  
     } else {
     cookiesArr.push($.getdata('youthheader_zq'));
     redpArr.push($.getdata('red_zq'));
@@ -157,10 +153,10 @@ if (isGetCookie = typeof $request !== 'undefined') {
       redpbodyVal = redpArr[i];
       $.index = i + 1;
       console.log(`-------------------------\n\n开始【中青看点${$.index}】`)
-      console.log(`============ CookieYouth${signheaderVal}  =============\n`) 
-      console.log(`============ ARTBODYs${articlebodyVal}  =============\n`) 
-      console.log(`============ REDBODYs${redpbodyVal}  =============\n`) 
-      console.log(`============ READTIME${timebodyVal}  =============\n`)  
+      $.msg(`signheaderVal: ${signheaderVal}`)
+      $.msg(`signheaderVal: ${articlebodyVal}`)   
+      $.msg(`signheaderVal: ${redpbodyVal}`)
+      $.msg(`timebodyVal: ${timebodyVal}`)
     }
   await sign();
   await signInfo();
