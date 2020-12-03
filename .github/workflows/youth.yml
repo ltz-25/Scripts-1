@@ -36,11 +36,7 @@ jobs:
         if: env.YOUTH_HEADER
         run: |
           cd ~/Scripts
-          node Task/youth.js
-          echo "YOUTH_HEADER: ${{ secrets.YOUTH_HEADER }}"
-          echo "YOUTH_ARTBODY: ${{ secrets.YOUTH_ARTBODY }}"
-          echo "YOUTH_REDBODY: ${{ secrets.YOUTH_REDBODY }}"
-          echo "YOUTH_TIME: ${{ secrets.YOUTH_TIME }}"        
+          node Task/youth.js     
         env:
           YOUTH_NOTIFY_CONTROL: ${{ secrets.YOUTH_NOTIFY_CONTROL }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
