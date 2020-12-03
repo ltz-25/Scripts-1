@@ -37,10 +37,6 @@ jobs:
         run: |
           cd ~/Scripts
           node Task/youth.js
-          console.log(`${YOUTH_HEADER }`)
-          console.log(`${YOUTH_ARTBODY }`)
-          console.log(`${YOUTH_REDBODY }`)
-          console.log(`${YOUTH_TIME }`)
         env:
           YOUTH_NOTIFY_CONTROL: ${{ secrets.YOUTH_NOTIFY_CONTROL }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
